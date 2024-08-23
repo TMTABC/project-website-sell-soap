@@ -10,7 +10,7 @@ function NavbarMain() {
     return (
         <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" >
             <Container fluid>
-                <Navbar.Brand href="/">Trang chủ</Navbar.Brand>
+                <Navbar.Brand href="/">Trang chủs</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
