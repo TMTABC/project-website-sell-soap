@@ -1,24 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import HomePage from './layouts/home-page/homePage';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from './layouts/Layout';
+import Introduction from './layouts/introduction/introduction';
+import Products from './layouts/products/products';
+import Process from './layouts/process/process';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="gioithieu" element={<Introduction />} />
+          <Route path="products" element={<Products />} />
+          <Route path='process' element={<Process />} />
+          {/* <Route path="*" element={<NoPage />} /> */}
+        </Route>
+      </Routes>
+    </BrowserRouter >
   );
 }
 
