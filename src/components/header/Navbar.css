@@ -1,0 +1,5 @@
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: #ffbd30 !important;
+    color: black !important
+}

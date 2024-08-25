@@ -10,7 +10,7 @@ import Products from './layouts/products/products';
 import Process from './layouts/process/process';
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
@@ -20,7 +20,7 @@ function App() {
           {/* <Route path="*" element={<NoPage />} /> */}
         </Route>
       </Routes>
-    </BrowserRouter >
+    </>
   );
 }
 
