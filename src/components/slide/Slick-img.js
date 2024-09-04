@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-
+import Image from 'react-bootstrap/Image';
 function Fade() {
     const settings = {
         dots: true,
@@ -10,22 +10,23 @@ function Fade() {
         slidesToShow: 1,
         slidesToScroll: 1,
         waitForAnimate: false,
-        autoplay:true
+        autoplay: true
     };
     return (
         <div className="slider-container">
             <Slider {...settings}>
                 <div>
-                    {/* <img src={baseUrl + "/abstract01.jpg"} /> */}1
+                    <Image src="/abstract02.jpg" fluid></Image>
+                    {/* {<img src={"./abstract02.jpg"} />}1 */}
                 </div>
                 <div>
-                    {/* <img src={baseUrl + "/abstract02.jpg"} /> */}2
+                    <img src={"logo512.png"} alt="product1" />
                 </div>
                 <div>
-                    {/* <img src={baseUrl + "/abstract03.jpg"} /> */}3
+                    {<img src={"/abstract02.jpg"} className="img-fluid" alt="product2" />}
                 </div>
                 <div>
-                    {/* <img src={baseUrl + "/abstract04.jpg"} /> */}4
+                    <Image src="/736462.png" fluid></Image>
                 </div>
             </Slider>
         </div>

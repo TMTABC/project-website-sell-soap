@@ -30,7 +30,7 @@ function NavbarMain() {
                     <NavDropdown.Item eventKey="4.4">Separated link</NavDropdown.Item>
                 </NavDropdown>
             </Nav> */}
-            <Navbar expand="lg" defaultActiveKey={window.location.pathname} style={{ background: '#ffbd30' }}>
+            <Navbar expand="lg" defaultactivekey={window.location.pathname} style={{ background: '#ffbd30' }}>
                 <Container>
                     <Navbar.Brand href="/">Home</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -38,7 +38,8 @@ function NavbarMain() {
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to="/gioithieu" eventKey="/gioithieu">Gioi Thieu</Nav.Link>
                             <Nav.Link as={Link} to="/process" eventKey="/process">Quy trinh</Nav.Link>
-                            <NavDropdown title="San Pham" id="collapsible-nav-dropdown">
+                            <NavDropdown to='gioithieu' title="San Pham" id="collapsible-nav-dropdown" className='dropdown'>
+                                { }
                                 <NavDropdown.Item as={Link} to="/products" eventKey="/products" className='dropdown-item'>San pham 1</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">
                                     San Pham 2

@@ -3,3 +3,36 @@
     background-color: #ffbd30 !important;
     color: black !important
 }
+
+/* Đảm bảo menu dropdown giữ trạng thái mở khi di chuột qua */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Đảm bảo menu có chiều rộng tự động */
+    width: auto;
+}
+
+/* Hiển thị menu khi hover vào tiêu đề dropdown hoặc menu */
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+}
+
+/* Giúp menu dropdown không bị ẩn khi di chuột qua các item bên trong */
+.navbar-nav .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* Cung cấp đủ không gian để menu không bị ẩn */
+    padding: 0;
+    margin: 0;
+}
